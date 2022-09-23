@@ -20,9 +20,8 @@ impl CargoRepository {
             codigo: input.codigo,
             nome: input.nome,
         };
-        let cargo_shadown = cargo.clone();
-        self.collection.insert_one(cargo, None).unwrap();
-        cargo_shadown
+        self.collection.insert_one(&cargo, None).unwrap();
+        cargo
     }
 
     pub fn get_by_id(&self, id: String) -> Option<Cargo> {

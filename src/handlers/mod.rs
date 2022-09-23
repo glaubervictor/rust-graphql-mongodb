@@ -1,6 +1,9 @@
 mod graphql;
 
-use actix_web::{web::{self, Data}, Error, HttpResponse};
+use actix_web::{
+    web::{self, Data},
+    Error, HttpResponse,
+};
 use graphql::{create_schema, Context, Schema};
 use juniper_actix::{graphql_handler, playground_handler};
 
