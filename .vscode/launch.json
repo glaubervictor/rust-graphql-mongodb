@@ -1,0 +1,45 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'ahjato-ponto'",
+      "cargo": {
+        "args": [
+          "build",
+          "--bin=ahjato-ponto",
+          "--package=ahjato-ponto"
+        ],
+        "filter": {
+          "name": "ahjato-ponto",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in executable 'ahjato-ponto'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--bin=ahjato-ponto",
+          "--package=ahjato-ponto"
+        ],
+        "filter": {
+          "name": "ahjato-ponto",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}

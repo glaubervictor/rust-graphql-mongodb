@@ -1,0 +1,40 @@
+[package]
+name = "rust-graphql-mongodb"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+#Web
+actix-web = "4"
+actix-rt = "2.7.0"
+actix-cors = "0.6.3"
+
+#GraphQL
+juniper = "0.15.10"
+juniper_actix = "0.4.0"
+
+#Env
+dotenv = "0.15.0"
+config = "0.13.2"
+
+#Logs
+slog = "2.7.0"
+slog-term = "2.9.0"
+slog-async = "2.7.0"
+slog-envlogger = "2.2.0"
+slog-scope = "4.4.0"
+slog-stdlog = "4.1.1"
+
+#Json
+serde = { version = "1.0.145", features = ["derive"] }
+
+#Database
+mongodb = { version = "2.3.0", default-features = false, features = ["sync"] }
+bson = "2.4.0"
+futures = "0.3.24"
+
+#Utilities
+uuid = "1.1.2"
