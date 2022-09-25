@@ -1,8 +1,10 @@
 mod config;
-mod error;
 mod handlers;
 mod repositories;
 mod models;
+mod errors;
+mod jwt;
+mod util;
 
 use crate::config::Config;
 use crate::handlers::app_config;

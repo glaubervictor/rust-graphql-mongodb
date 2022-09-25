@@ -11,6 +11,7 @@ edition = "2021"
 actix-web = "4"
 actix-rt = "2.7.0"
 actix-cors = "0.6.3"
+actix-identity = "0.5.2"
 
 #GraphQL
 juniper = "0.15.10"
@@ -37,4 +38,13 @@ bson = "2.4.0"
 futures = "0.3.24"
 
 #Utilities
-uuid = "1.1.2"
+uuid = { version = "=0.7", features = ["serde", "v4"] }
+chrono = { version = "0.4", features = ["serde"] }
+jsonwebtoken = "7"
+thiserror = "1.0.36"
+regex = "1.6.0"
+lazy_static = "1.4.0"
+shrinkwraprs = "0.3.0"
+argon2rs = "0.2.5"
+rand = "0.7"
+anyhow = "1.0.65"

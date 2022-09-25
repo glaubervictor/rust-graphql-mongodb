@@ -20,7 +20,7 @@ pub struct Context {
 impl Context {
     pub fn new() -> Context {
         let client_options =
-            ClientOptions::parse("mongodb://localhost:27017").unwrap();
+            ClientOptions::parse("mongodb://admin:123456@localhost:27017").unwrap();
         let client = Client::with_options(client_options).unwrap();
         let db = client.database("mydb");
         let collection = db.collection::<Cargo>("cargos");
